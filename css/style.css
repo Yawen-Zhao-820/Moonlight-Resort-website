@@ -1,0 +1,691 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body{
+    height: 100%;
+    font-family: 'EB Garamond', serif;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    background-image: url("../images/Background.JPG");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+button:hover{
+    transform: translate(0,-5px);
+    transition: 0.5s;
+}
+
+button:focus{
+    background-color: rgb(255, 255, 255, 0.4);
+    transition: 0.5s;
+}
+
+button{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+ul{
+    list-style: none;
+}
+
+a:focus{
+    background-color: rgb(255, 255, 255, 0.3);
+    transition: 0.5s;
+}
+
+
+/* make the label text invisible but can be read by screen reader */
+
+
+.invisible{
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/* header navigation */
+
+
+#navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    height: 170px;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.header-nav{
+    width: 100%;
+    height: 120px;
+}
+
+.header-nav ul{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header-nav a:hover{
+    transform: translate(0,-5px);
+    transition: 0.5s;
+}
+
+.header-nav a:focus{
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+.logo{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    width: 110px;
+    height: auto;
+}
+
+.search-bar{
+    width: 70%;
+}
+
+.search-bar form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar input[type=text]{
+    width: 90%;
+    padding: 8px;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-color: transparent;
+}
+
+.search-bar input[type=text]:hover,
+.subscribe input[type=email]:hover{
+    background-color: rgb(255, 255, 255, 0.6);
+    transition: 0.5s;
+}
+
+.search-bar input[type=text]:focus,
+.subscribe input[type=email]:focus{
+    background-color: rgb(255, 255, 255, 0.6);
+}
+
+.search-bar img{
+    width: 25px;
+    height: auto;
+    margin-left: 5px;
+}
+
+.top-icon{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-icon img{
+    width: 25px;
+    height: auto;
+    margin: 10px;
+}
+
+.side-bar-btn{
+    display: none;
+}
+
+.line{
+    width: 100%;
+    top: 115px;
+    position: absolute;
+}
+
+.line hr{
+    border: 1px solid rgb(255, 255, 255, 0.5)
+}
+
+
+/* header main menu */
+
+.current-page{
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+.main-menu{
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.main-menu ul {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 23px;
+}
+
+.main-menu li,
+.main-menu li a{
+    width: 100%;
+    display: block;
+}
+
+
+.main-menu ul li a:hover,
+.footer-nav ul li a:hover{
+    transition: 0.5s;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-bottom: rgb(153, 184, 224);
+}
+
+
+/* dynamic album */
+
+
+.album{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 5px 10px 18px rgb(255, 255, 255, 0.3);
+    height: 55%;
+    width: auto;
+    Z-index: -999;
+}
+
+.album img{
+    width: auto;
+    height: 100%;
+}
+
+
+/* footer */
+
+
+#bottom{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 100px;
+    background-color: rgb(0, 0, 0, 0.9);
+}
+
+#bottom div{
+    width: 100%;
+}
+
+.footer-01{
+    width: 100%;
+    height: 66%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.footer-02{
+    margin: auto;
+    width: 100%;
+    height: 33%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(255, 255, 255, 0.7);
+}
+
+.subscribe,
+.footer-nav{
+    width: 100%;
+}
+
+.footer-nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-nav ul li{
+    width: 100%;
+    height: 100%;
+}
+
+.footer-nav ul li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 5px 0;
+}
+
+.subscribe form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe form img{
+    width: 20px;
+    height: auto;
+    padding: 0 2px;
+}
+
+.subscribe form p{
+    padding: 0 5px;
+}
+
+.subscribe input[type=email]{
+    width: 25%;
+    padding: 2px;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-color: transparent;
+}
+
+.copyright{
+    width: 100%;
+}
+
+
+/* body content container */
+
+
+#body-content{
+    margin-top: 170px;
+    margin-bottom: 140px;
+}
+
+#body-content .invisible-info{
+    font-size: 1.2vw;
+}
+
+body.js #body-content .invisible-info{
+    display: none;
+    font-size: 1.2vw;
+}
+
+body.js .hide-btn-01, 
+body.js .hide-btn-02, 
+body.js .hide-btn-03, 
+body.js .hide-btn-04{
+    display: none;
+}
+
+#body-content .info-visible{
+    font-size: 1.2vw;
+}
+
+#body-content .info-title{
+    font-size: 2vw;
+}
+
+#body-content button{
+    font-size: 1vw;
+    font-family: 'EB Garamond', serif;
+    width: 30%;
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+#body-content div{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#body-content div ul{
+    padding: 10px;
+    width: 70%;
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+#body-content div li{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    line-height: 2.8vw;
+}
+
+#body-content div li img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* customer booking form */
+
+
+#booking-content{
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 140px;
+}
+
+.booking-form{
+    width: 50%;
+    height: auto;
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.booking-form form{
+    margin: auto;
+    width: 100%;
+}
+
+.booking-form input, 
+.booking-form select{
+    width: 70%;
+    padding: 5px;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-color: transparent;
+}
+
+.booking-form input:focus, 
+.booking-form select:focus{
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+#booking-content form li{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#booking-content button, 
+.advice-form button{
+    font-size: 25px;
+    font-family: 'EB Garamond', serif;
+    width: 30%;
+}
+
+#booking-content button:hover, 
+.advice-form button:hover{
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+
+/* advice box */
+
+
+#contact-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 140px;
+}
+
+.contact-info, 
+.advice-form{
+    list-style: none;
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    background-color:rgb(0, 0, 0, 0.6);
+    border-radius: 10px;
+    line-height: 40px;
+}
+
+.advice-form input[type=text],
+.advice-form input[type=email], 
+.advice-form textarea{
+    width: 90%;
+    padding: 7px;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-color: transparent;
+}
+
+.advice-form input[type=text]:focus,
+.advice-form input[type=email]:focus, 
+.advice-form textarea:focus{
+    width: 90%;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-color: transparent;
+}
+
+
+/* reference */
+
+#reference{
+    width: 80%;
+    margin-top: 200px;
+    margin-bottom: 140px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+
+/* site map */
+
+
+#sitemap{
+    width: 60%;
+    margin-top: 220px;
+    margin-bottom: 140px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 15px;
+    line-height: 40px;
+    font-size: 23px;
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+#sitemap ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sitemap ul li a:hover{
+    background-color: rgb(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+
+/* for mobile device */
+
+
+@media (max-width:975px){
+    #navigation{
+        height: 90px;
+    }
+
+    .header-nav{
+        height: 100%;
+    }
+
+    .logo, .top-icon{
+        width: 40%;
+    }
+
+    .search-bar{
+        display: none;
+    }
+
+    .logo img{
+        width: 85px;
+        height: auto;
+    }
+
+    .side-bar-btn{
+        display: block;
+    }
+
+    .line{
+        top: 90px;
+    }
+
+    .toggle{
+        left: 0 !important;
+    }
+
+    .main-menu{
+        margin: 0;
+        margin-top: 2px;
+        width: 100%;
+        background-color: rgb(0, 0, 0, 0.9);
+        position: absolute;
+        left: -101%;
+        transition: 0.7s;
+        Z-index: 999;
+    }
+
+    .main-menu ul li:hover{
+        border-bottom: 1px solid rgb(153, 184, 224);
+    }
+
+    .main-menu ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-menu ul li{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-menu ul li a{
+        width: 100%;
+        height: 100%;
+        padding: 15px 0;
+    }
+
+    #bottom{
+        margin: 0;
+        height: auto;
+    }
+
+    .footer-01{
+        display: table;
+        vertical-align: middle;
+    }
+
+    .footer-nav ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-nav ul li{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .footer-nav ul li a{
+        width: 100%;
+        height: 100%;
+        padding: 5px 0;
+    }
+
+    .subscribe form{
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .footer-02{
+        padding: 10px 0;
+        font-size: 6px;
+    }
+
+    #body-content{
+        margin-top: 100px;
+        margin-bottom: 174px;
+    }
+
+    #body-content div ul{
+        width: 90%;
+    }
+
+    #body-content div ul li{
+        line-height: 25px;
+    }
+
+    #booking-content, #contact-content{
+        margin-top: 120px;
+        margin-bottom: 174px;
+    }
+
+    .booking-form{
+        width: 80%;
+    }
+
+    #contact-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info{
+        width: 80%;
+        margin: 10px;
+    }
+    
+    .advice-form{
+        width: 80%;
+        margin: 10px;
+    }
+
+    #reference, #sitemap{
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 120px;
+        margin-bottom: 174px;
+    }
+
+}
